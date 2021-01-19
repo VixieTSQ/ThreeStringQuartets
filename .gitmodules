@@ -1,6 +1,3 @@
 [submodule "lib/source-code-pro"]
 	path = lib/source-code-pro
 	url = https://github.com/adobe-fonts/source-code-pro
-[submodule "lib/lib/source-code-pro"]
-	path = lib/lib/source-code-pro
-	url = https://github.com/adobe-fonts/source-code-pro
