@@ -1,0 +1,46 @@
+/* Font */
+body { font-family: Source Code Pro; }
+/* Source  Code Pro is licensed under SIL Open Font License 1.1 https://github.com/adobe-fonts/source-code-pro/blob/release/LICENSE.md */
+
+/* Hacky 'holy grail 2.0' shit courtesy of Gaboris + layout. Thank you! */
+html, body {
+    height: 100%;
+}
+body {
+    padding: 0% 20%; /* Distance from sides, but this effects everything everything on the page */
+}
+#container, #right, #content, #navigation, #header {
+    margin: 1px; /* Visual guide. You can remove it after you understand what's what. */
+    border: 1px solid; /* Visual guide. You can remove it after you understand what's what. */
+    display: block; /* Just making sure that all elements in the layout are "blocks" since they have special functionality like automatic width calculation and being able to define their width and height manually to begin with. */
+    box-sizing: border-box; /* With this things like borders and paddings will get included in manual width calculations. Just use it. */
+}
+#header {
+    background-color: darkblue;
+    padding: 7%;
+}
+#navigation {
+    background-color: grey;
+    padding: 1.5%;
+}
+#container {
+    overflow: hidden; /* Makes the container grow in height with special elements that use "float". */
+    height: 100%;
+}
+#right {
+    float: right; /* Special behavior that causes and element to "float" to the side of its container pushing all others in its way aside. It depends on its positioning inside the code.  */
+    width: 25%;
+    height: 100%;
+}
+#content {
+    overflow: auto; /* Stops content from flowing "around" a floating element and instead they align themselves in a column. */
+    height: 100%;
+}
+
+/* Backgrounds. Temp colors til I get some art */
+body {
+    background-color:lightblue;
+}
+#container {
+    background-color: black;
+  }
