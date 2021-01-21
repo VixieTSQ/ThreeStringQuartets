@@ -1,5 +1,8 @@
 /* Font */
-body { font-family: Source Code Pro; }
+body { 
+    font-family: Source Code Pro;
+    color: whitesmoke;
+}
 /* Source  Code Pro is licensed under SIL Open Font License 1.1 https://github.com/adobe-fonts/source-code-pro/blob/release/LICENSE.md */
 
 /* Hacky 'holy grail 2.0' shit courtesy of Gaboris + layout. Thank you! */
@@ -9,9 +12,7 @@ html, body {
 body {
     padding: 0% 20%; /* Distance from sides, but this effects everything everything on the page */
 }
-#container, #right, #content, #navigation, #header {
-    margin: 1px; /* Visual guide. You can remove it after you understand what's what. */
-    border: 1px solid; /* Visual guide. You can remove it after you understand what's what. */
+#right, #content, #navigation, #header, #container {
     display: block; /* Just making sure that all elements in the layout are "blocks" since they have special functionality like automatic width calculation and being able to define their width and height manually to begin with. */
     box-sizing: border-box; /* With this things like borders and paddings will get included in manual width calculations. Just use it. */
 }
@@ -26,6 +27,8 @@ body {
 #container {
     overflow: hidden; /* Makes the container grow in height with special elements that use "float". */
     height: 100%;
+    margin: 0 auto; /* Set the side margins of the element to automatically fill the space, but it's very sensitive and only applies in some cases. You have to play around with stuff like display values or the likes. */
+    max-width: 1000px; /* Set the maximum width of the element so that it grows with its container, but stops at the set size. */
 }
 #right {
     float: right; /* Special behavior that causes and element to "float" to the side of its container pushing all others in its way aside. It depends on its positioning inside the code.  */
@@ -37,10 +40,47 @@ body {
     height: 100%;
 }
 
+/* Buttons and nav stuff */
+li {
+    display: inline;
+}
+.button-current {
+    background-size: 100% 200%;
+    background-position: right top;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 1.5%;
+    transition: all 0.25s ease;
+    cursor:pointer;
+    background-color: darkblue;
+    text-align: center;
+}
+.button {
+    background: linear-gradient(to bottom, darkblue 50%, transparent 0);
+    background-size: 100% 200%;
+    background-position: left bottom;
+    text-decoration: none;
+    color: #000;
+    padding: 1.5%;
+    transition: all 0.25s ease;
+    cursor:pointer;
+    background-color: transparent;
+    text-align: center;
+}
+.button:hover{
+    background-position: right top;
+    color: whitesmoke;
+}
+.button-current:hover {
+    background-color: rgb(0, 0, 100);
+  }
+
 /* Backgrounds. Temp colors til I get some art */
 body {
     background-color:lightblue;
 }
 #container {
-    background-color: black;
-  }
+    background-color: rgb(14, 14, 14);
+    background-image: url("/assets/paper-grain.png");
+    background-attachment: fixed;
+}
