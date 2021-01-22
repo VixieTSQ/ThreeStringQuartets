@@ -9,20 +9,12 @@ body {
 html, body {
     height: 100%;
 }
-body {
-    padding: 0% 20%; /* Distance from sides, but this effects everything everything on the page */
-}
 #right, #content, #navigation, #header, #container {
     display: block; /* Just making sure that all elements in the layout are "blocks" since they have special functionality like automatic width calculation and being able to define their width and height manually to begin with. */
     box-sizing: border-box; /* With this things like borders and paddings will get included in manual width calculations. Just use it. */
 }
 #header {
-    background-color: darkblue;
     padding: 7%;
-}
-#navigation {
-    background-color: grey;
-    padding: 1.5%;
 }
 #container {
     overflow: hidden; /* Makes the container grow in height with special elements that use "float". */
@@ -35,25 +27,26 @@ body {
     width: 25%;
     height: 100%;
 }
+#aside-content {
+    position: fixed;
+}
 #content {
     overflow: auto; /* Stops content from flowing "around" a floating element and instead they align themselves in a column. */
     height: 100%;
 }
 
 /* Buttons and nav stuff */
-li {
-    display: inline;
-}
 .button-current {
     background-size: 100% 200%;
     background-position: right top;
     text-decoration: none;
     color: whitesmoke;
-    padding: 1.5%;
+    padding: 1.6%;
     transition: all 0.25s ease;
     cursor:pointer;
     background-color: darkblue;
     text-align: center;
+    display: inline-block;
 }
 .button {
     background: linear-gradient(to bottom, darkblue 50%, transparent 0);
@@ -61,11 +54,12 @@ li {
     background-position: left bottom;
     text-decoration: none;
     color: #000;
-    padding: 1.5%;
+    padding: 1.6%;
     transition: all 0.25s ease;
     cursor:pointer;
     background-color: transparent;
     text-align: center;
+    display: inline-block;
 }
 .button:hover{
     background-position: right top;
@@ -83,4 +77,11 @@ body {
     background-color: rgb(14, 14, 14);
     background-image: url("/assets/paper-grain.png");
     background-attachment: fixed;
+}
+
+#navigation {
+    background-color: grey;
+}
+#header {
+    background-color: darkblue;
 }

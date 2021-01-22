@@ -16,13 +16,18 @@
         <div id="container">
             <header id="header"></header>
             <nav id="navigation">
-                <li><a href="/" class="button-current">Home</a></li>
-                <li><a href="/" class="button">Discography</a></li>
+                <a href="/">
+                    <div class="button-current">
+                        Home
+                    </div></a><a href="/"><div class="button"> <!-- Sorry for this mess. Just ends the div and link and makes a set of new ones -->
+                        Discography
+                    </div>
+                </a>
             </nav>
-            <aside id="right" class="mainshit">
-                    Side menu
+            <aside id="right">
+                    <div id="aside-content">Side content</div>
             </aside>
-            <main id="content" class="mainshit">
+            <main id="content">
                     Site content
             </main>
         </div>
