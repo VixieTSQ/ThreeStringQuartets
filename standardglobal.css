@@ -10,29 +10,31 @@ html, body {
     height: 100%;
 }
 #right, #content, #navigation, #header, #container {
-    display: block; /* Just making sure that all elements in the layout are "blocks" since they have special functionality like automatic width calculation and being able to define their width and height manually to begin with. */
-    box-sizing: border-box; /* With this things like borders and paddings will get included in manual width calculations. Just use it. */
+    display: block;
+    box-sizing: border-box;
 }
 #header {
-    padding: 7%;
+    padding: 9%;
 }
 #container {
-    overflow: hidden; /* Makes the container grow in height with special elements that use "float". */
+    overflow: hidden;
     height: 100%;
-    margin: 0 auto; /* Set the side margins of the element to automatically fill the space, but it's very sensitive and only applies in some cases. You have to play around with stuff like display values or the likes. */
-    max-width: 1000px; /* Set the maximum width of the element so that it grows with its container, but stops at the set size. */
+    margin: 0 auto;
+    max-width: 1000px;
 }
 #right {
-    float: right; /* Special behavior that causes and element to "float" to the side of its container pushing all others in its way aside. It depends on its positioning inside the code.  */
+    float: right;
     width: 25%;
     height: 100%;
+    padding: 2%;
 }
 #aside-content {
     position: fixed;
 }
 #content {
-    overflow: auto; /* Stops content from flowing "around" a floating element and instead they align themselves in a column. */
+    overflow: auto;
     height: 100%;
+    padding: 2%;
 }
 
 /* Buttons and nav stuff */
@@ -47,6 +49,7 @@ html, body {
     background-color: darkblue;
     text-align: center;
     display: inline-block;
+    width: 10%;
 }
 .button {
     background: linear-gradient(to bottom, darkblue 50%, transparent 0);
@@ -60,6 +63,7 @@ html, body {
     background-color: transparent;
     text-align: center;
     display: inline-block;
+    width: 10%;
 }
 .button:hover{
     background-position: right top;
